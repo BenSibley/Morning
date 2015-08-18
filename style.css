@@ -1,0 +1,50 @@
+/*
+ Theme Name:   Morning
+ Template:     apex
+ Theme URI:    https://www.competethemes.com/morning/
+ Author: 	   Compete Themes
+ Author URI:   https://www.competethemes.com
+ Version: 	   0.1
+ Description:  Morning is a child theme for the Apex theme. It features a simple and clean blog layout designed to focus visitors on your content.
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         gray, orange, silver, tan, white, light, fluid-layout, responsive-layout, one-column, accessibility-ready, custom-menu, featured-images, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+
+Morning WordPress Theme, Copyright 2015 Compete Themes
+Morning is distributed under the terms of the GNU GPL
+
+Morning is a child theme of Apex
+
+It's not recommended to add CSS to this file, as it will be lost if you ever update this child theme.
+ Instead, use the Custom CSS section in the Customizer.
+*/
+@import url("../apex/style.min.css");
+/* =Theme customization starts here
+-------------------------------------------------------------- */
+/*===== Variables =====*/
+/* Theme Colors */
+/* Media Query widths */
+/* Social Media Brand Colors */
+/*===== Mixins =====*/
+/***** Silent Classes *****/
+.site-title, .menu-primary, .widget-title {
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+.site-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+.tagline {
+  margin-top: 0.5em;
+}
+
+.menu-primary {
+  font-family: "Montserrat", sans-serif;
+}

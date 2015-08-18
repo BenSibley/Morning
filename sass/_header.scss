@@ -1,0 +1,14 @@
+.site-title {
+  font-family: $primary-font-stack;
+  @extend %uppercase;
+  font-weight: 700;
+}
+.tagline {
+  //font-family: $primary-font-stack;
+  margin-top: 0.5em;
+}
+
+.menu-primary {
+  font-family: $primary-font-stack;
+  @extend %uppercase;
+}

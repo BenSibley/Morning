@@ -1,0 +1,19 @@
+<?php
+
+function ct_unit_override_footer_text( $footer_text ) {
+
+	$site_url = 'https://www.competethemes.com/unit/';
+	$footer_text = '<a href="' . esc_url( $site_url ) . '">Unit WordPress Theme</a> by Compete Themes.';
+	return $footer_text;
+}
+//add_filter( 'ct_founder_footer_text', 'ct_unit_override_footer_text' );
+
+function ct_morning_register_scripts(){
+
+	// register Google Fonts typefaces & styles
+	wp_register_style( 'ct-morning-google-fonts', '//fonts.googleapis.com/css?family=Montserrat:400,700');
+
+	// enqueue Google Fonts
+	wp_enqueue_style('ct-morning-google-fonts');
+}
+add_action('wp_enqueue_scripts', 'ct_morning_register_scripts' );
