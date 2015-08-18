@@ -27,254 +27,84 @@ It's not recommended to add CSS to this file, as it will be lost if you ever upd
 /* Social Media Brand Colors */
 /*===== Mixins =====*/
 /***** Silent Classes *****/
-body {
-  background: #ededed;
+.post-date, .site-title, .menu-primary, .more-link, .comments-link, .widget-title {
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
 }
 
-.entry {
-  background: white;
-  border: solid 1px #e0e0e0;
-  margin: 2.25em 0;
-}
-.entry:first-child {
-  margin-top: 6em;
-}
-.entry:not(.has-post-thumbnail) {
-  padding-top: 0.75em;
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif;
 }
 
-.featured-image {
-  width: 100%;
-  right: 0;
-  padding-bottom: 50%;
+.site-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
 }
 
-.post-header {
-  padding: 1.5em 1.5em 0 1.5em;
-  margin: 0;
+.tagline {
+  margin-top: 0.5em;
 }
 
-.post-content {
-  padding: 0 1.5em 1.5em 1.5em;
+.menu-primary {
+  font-family: "Montserrat", sans-serif;
 }
 
-.post-after {
-  padding: 1.5em;
-  margin: 0;
+.more-link {
+  padding: 0;
+  border: none;
+  font-weight: 700;
 }
-.post-after:after {
-  display: none;
+.more-link:hover, .more-link:active, .more-link:focus {
+  background: none;
+  color: #6b6b6b;
 }
-
-.further-reading {
-  margin-bottom: 0;
+.more-link:hover:before, .more-link:active:before, .more-link:focus:before {
+  color: #333333;
 }
-.further-reading:before, .further-reading:after {
-  left: -1.5em;
-  right: -1.5em;
-  background: #e0e0e0;
-}
-
-@media all and (min-width: 56.25em) {
-  .entry:first-child {
-    margin-top: 4.5em;
-  }
-
-  .post-content {
-    padding: 0 3em 3em 3em;
-  }
-
-  .post-after {
-    padding: 1.5em 3em;
-  }
-
-  .further-reading:before, .further-reading:after {
-    left: -3em;
-    right: -3em;
-  }
-}
-@media all and (min-width: 68.75em) {
-  .post-header {
-    margin: 0.75em 0 2.25em;
-  }
-
-  .post-content {
-    padding: 0 4.5em 3em 4.5em;
-  }
-
-  .post-after {
-    padding: 1.5em 4.5em;
-  }
-
-  .further-reading:before, .further-reading:after {
-    left: -4.5em;
-    right: -4.5em;
-  }
-}
-.site-header {
-  position: relative;
-  background: white;
-  border-color: #e0e0e0;
-}
-.site-header:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  height: 100%;
-  right: -999px;
-  left: -999px;
-  background: white;
-  z-index: -1;
-}
-.site-header:after {
-  background: #e0e0e0;
+.more-link:before {
+  content: '\f02d';
+  font-family: 'FontAwesome';
+  margin-left: 6px;
 }
 
-.toggle-sidebar {
-  top: calc(100% - 1px);
-  border-color: #e0e0e0;
-  border-radius: 0 0 50% 50%;
+.blog .post-content,
+.archive .post-content,
+.search .post-content {
+  border-bottom: solid 1px #e8e8e8;
 }
-.toggle-sidebar:hover, .toggle-sidebar:active, .toggle-sidebar:focus {
-  border-color: #e0e0e0;
+.blog .post-content p:nth-last-child(3),
+.archive .post-content p:nth-last-child(3),
+.search .post-content p:nth-last-child(3) {
+  padding-bottom: 2.25em;
 }
-
-.sidebar-primary {
-  background: white;
-}
-.sidebar-primary:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  height: 100%;
-  right: -999px;
-  left: -999px;
-  background: white;
-  z-index: -1;
-}
-.sidebar-primary.open {
-  border-bottom: solid 1px #e0e0e0;
-}
-.sidebar-primary.open .toggle-sidebar {
-  border-color: #e0e0e0;
-  border-top: none;
-  top: 100%;
-}
-.sidebar-primary.open:after {
-  background: #e0e0e0;
-}
-
-.site-footer {
-  position: relative;
-  background: white;
-  border-color: #e0e0e0;
-}
-.site-footer:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -999px;
-  right: -999px;
-  height: 100%;
-  background: white;
-  z-index: -1;
-}
-.site-footer:after {
-  background: #e0e0e0;
+.blog .post-content p:last-of-type,
+.archive .post-content p:last-of-type,
+.search .post-content p:last-of-type {
+  padding-bottom: 1.5em;
+  margin-top: 0;
 }
 
 .loop-pagination {
-  background: white;
-  border: solid 1px #e0e0e0;
+  position: relative;
+  border-top: solid 1px #e8e8e8;
+  border-bottom: solid 1px #e8e8e8;
+  padding: 1.5em 0;
+  text-align: center;
 }
-.loop-pagination a,
-.loop-pagination span {
-  display: inline-block;
-  padding: 0.75em 1.5em;
-  margin: 0 0 0 -4px;
+.loop-pagination .next,
+.loop-pagination .prev {
+  position: absolute;
+  font-weight: 700;
+  color: #333333;
 }
-.loop-pagination .prev,
+.loop-pagination .next:link, .loop-pagination .next:visited,
+.loop-pagination .prev:link,
+.loop-pagination .prev:visited {
+  color: #333333;
+}
 .loop-pagination .next {
-  margin: 0 0 0 -4px;
+  left: 0;
 }
 .loop-pagination .prev {
-  float: right;
-}
-.loop-pagination .next {
-  float: left;
-  margin-left: 0px;
-}
-.loop-pagination a {
-  border-bottom: none;
-  border-left: solid 1px transparent;
-  border-right: solid 1px transparent;
-  transition: all 0.1s ease-in-out;
-}
-.loop-pagination a:hover, .loop-pagination a:active, .loop-pagination a:focus {
-  background: #f7f7f7;
-  border-color: #ededed;
-}
-
-.archive-header {
-  background: white;
-  border: solid 1px #e0e0e0;
-  padding: 1.5em;
-  margin-bottom: 0;
-}
-.archive-header h2 {
-  font-size: 1em;
-  line-height: 1.5;
-  font-weight: 600;
-}
-.archive-header span {
-  font-weight: 300;
-}
-
-.sticky.has-post-thumbnail {
-  position: relative;
-}
-.sticky.has-post-thumbnail .sticky-status {
-  position: absolute;
-  top: 0;
   right: 0;
-}
-.sticky.has-post-thumbnail .sticky-status span {
-  display: inline-block;
-  background: #333333;
-  color: white;
-  padding: 12px 24px;
-}
-
-@media all and (min-width: 68.75em) {
-  .archive .post-content p:last-of-type,
-  .blog .post-content p:last-of-type,
-  .search .post-content p:last-of-type {
-    margin: 1.5em 0 0;
-  }
-}
-.comments {
-  padding: 1.5em;
-}
-
-.comments-number {
-  margin: 0 0 1.5em;
-}
-
-.comment-list {
-  margin: 0;
-}
-
-.comment-respond {
-  margin: 3em 0;
-}
-
-@media all and (min-width: 56.25em) {
-  .comments {
-    padding: 1.5em 3em;
-  }
-}
-@media all and (min-width: 68.75em) {
-  .comments {
-    padding: 1.5em 4.5em;
-  }
 }
