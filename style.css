@@ -27,13 +27,50 @@ It's not recommended to add CSS to this file, as it will be lost if you ever upd
 /* Social Media Brand Colors */
 /*===== Mixins =====*/
 /***** Silent Classes *****/
-.post-date, .site-title, .menu-primary, .more-link, .comments-link, .widget-title {
+.post-date, .post-categories, .further-reading span, .site-title, .menu-primary, .site-footer, .more-link, .comments-link, .comment-footer, .widget-title {
   text-transform: uppercase;
   letter-spacing: 0.03em;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Montserrat", sans-serif;
+}
+
+@media all and (min-width: 56.25em) {
+  body {
+    background: #f2f2f2;
+  }
+
+  .overflow-container {
+    padding: 0 3.125%;
+    margin: 0 3.125%;
+    background: white;
+    border-right: solid 1px #ededed;
+    border-left: solid 1px #ededed;
+  }
+}
+@media all and (min-width: 68.75em) {
+  .overflow-container {
+    padding: 0 4.6875%;
+    margin: 0 4.6875%;
+  }
+}
+.entry {
+  margin: 3em 0;
+}
+
+.post-categories {
+  margin-right: 2.25em;
+}
+
+.post-categories,
+.post-tags {
+  display: inline-block;
+  margin-bottom: 1.5em;
+}
+
+.further-reading {
+  margin-top: 0;
 }
 
 .site-title {
@@ -52,18 +89,20 @@ h1, h2, h3, h4, h5, h6 {
 .more-link {
   padding: 0;
   border: none;
-  font-weight: 700;
 }
 .more-link:hover, .more-link:active, .more-link:focus {
   background: none;
   color: #6b6b6b;
+  text-decoration: underline;
 }
 .more-link:hover:before, .more-link:active:before, .more-link:focus:before {
   color: #333333;
+  text-decoration: none;
 }
 .more-link:before {
   content: '\f02d';
   font-family: 'FontAwesome';
+  display: inline-block;
   margin-right: 6px;
 }
 
@@ -75,20 +114,18 @@ h1, h2, h3, h4, h5, h6 {
 .blog .post-content p:nth-last-child(3),
 .archive .post-content p:nth-last-child(3),
 .search .post-content p:nth-last-child(3) {
-  padding-bottom: 2.25em;
+  padding-bottom: 0.75em;
 }
 .blog .post-content p:last-of-type,
 .archive .post-content p:last-of-type,
 .search .post-content p:last-of-type {
-  padding-bottom: 1.5em;
   margin-top: 0;
+  padding-bottom: 1.5em;
 }
 
 .loop-pagination {
   position: relative;
-  border-top: solid 1px #e8e8e8;
-  border-bottom: solid 1px #e8e8e8;
-  padding: 1.5em 0;
+  margin: 1.5em 0;
   text-align: center;
 }
 .loop-pagination .next,
@@ -103,8 +140,19 @@ h1, h2, h3, h4, h5, h6 {
   color: #333333;
 }
 .loop-pagination .next {
-  right: 0;
+  right: 4.6875%;
+  margin-right: 0;
 }
 .loop-pagination .prev {
-  left: 0;
+  left: 4.6875%;
+  margin-left: 0;
+}
+
+@media all and (min-width: 56.25em) {
+  .loop-pagination .next {
+    right: 0;
+  }
+  .loop-pagination .prev {
+    left: 0;
+  }
 }

@@ -1,3 +1,22 @@
+.entry {
+  margin: $baseline-height * 2 0;
+}
 .post-date {
   @extend %uppercase;
+}
+.post-categories {
+  @extend %uppercase;
+  margin-right: $baseline-height * 1.5;
+}
+.post-categories,
+.post-tags {
+  display: inline-block;
+  margin-bottom: $baseline-height;
+}
+.further-reading {
+  margin-top: 0;
+
+  span {
+    @extend %uppercase;
+  }
 }
