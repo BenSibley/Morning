@@ -2,11 +2,11 @@
 
 function ct_unit_override_footer_text( $footer_text ) {
 
-	$site_url = 'https://www.competethemes.com/unit/';
-	$footer_text = '<a href="' . esc_url( $site_url ) . '">Unit WordPress Theme</a> by Compete Themes.';
+	$site_url = 'https://www.competethemes.com/morning/';
+	$footer_text = '<a href="' . esc_url( $site_url ) . '">Morning WordPress Theme</a> by Compete Themes.';
 	return $footer_text;
 }
-//add_filter( 'ct_founder_footer_text', 'ct_unit_override_footer_text' );
+add_filter( 'ct_apex_footer_text', 'ct_unit_override_footer_text' );
 
 function ct_morning_register_scripts(){
 
