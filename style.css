@@ -36,6 +36,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Montserrat", sans-serif;
 }
 
+.overflow-container {
+  background: white;
+}
+
 @media all and (min-width: 56.25em) {
   body {
     background: #f2f2f2;
@@ -44,7 +48,6 @@ h1, h2, h3, h4, h5, h6 {
   .overflow-container {
     padding: 0 3.125%;
     margin: 0 3.125%;
-    background: white;
     border-right: solid 1px #ededed;
     border-left: solid 1px #ededed;
   }
@@ -104,6 +107,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'FontAwesome';
   display: inline-block;
   margin-right: 6px;
+  transition: all 0.1s ease-in-out;
 }
 
 .blog .post-content,

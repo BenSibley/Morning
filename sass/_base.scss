@@ -1,6 +1,9 @@
 h1,h2,h3,h4,h5,h6 {
   font-family: $primary-font-stack;
 }
+.overflow-container {
+  background: white;
+}
 
 @media all and (min-width: $nine-hundred) {
 
@@ -10,7 +13,6 @@ h1,h2,h3,h4,h5,h6 {
   .overflow-container {
     padding: 0 $column;
     margin: 0 $column;
-    background: white;
     border-right: solid 1px $color-gray-93;
     border-left: solid 1px $color-gray-93;
   }
