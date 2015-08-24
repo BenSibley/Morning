@@ -27,6 +27,13 @@ It's not recommended to add CSS to this file, as it will be lost if you ever upd
 /* Social Media Brand Colors */
 /*===== Mixins =====*/
 /***** Silent Classes *****/
+.post-categories {
+  font-size: 0.75em;
+  /* 12px / 16px */
+  line-height: 1.5;
+  /* 18px */
+}
+
 .post-date, .post-categories, .further-reading span, .site-title, .menu-primary, .site-footer, .more-link, .comments-link, .sticky-status, .comment-footer, .widget-title {
   text-transform: uppercase;
   letter-spacing: 0.03em;
